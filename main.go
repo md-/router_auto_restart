@@ -40,6 +40,7 @@ func main() {
 		if !isSiteAccessible("http://192.168.0.1") {
 			fmt.Println("Router is not accessible. Skipping site checks.")
 			time.Sleep(checkInterval)
+			start = time.Now() // reset timer while router is down
 			continue
 		} else {
 			fmt.Println("Router is accessible. Checking Internet connection.")
