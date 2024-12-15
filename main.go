@@ -69,7 +69,10 @@ func main() {
 				} else {
 					fmt.Println("Router restarted successfully.")
 				}
+				fmt.Println("Waiting for 2 minutes.")
+				time.Sleep(2 * time.Minute)
 				start = time.Now() // Reset the timer after a restart
+				fmt.Println("Proceeding")
 			}
 		}
 
@@ -80,7 +83,7 @@ func main() {
 
 func isSiteAccessible(url string) bool {
 	client := http.Client{
-		Timeout: 5 * time.Second,
+		Timeout: 2 * time.Second,
 	}
 	resp, err := client.Get(url)
 	if err != nil {
