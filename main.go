@@ -42,8 +42,6 @@ func main() {
 			time.Sleep(checkInterval)
 			start = time.Now() // reset timer while router is down
 			continue
-		} else {
-			fmt.Println("Router is accessible. Checking Internet connection.")
 		}
 
 		allUnavailable := true
@@ -58,7 +56,6 @@ func main() {
 		}
 
 		if !allUnavailable {
-			fmt.Println("At least one site is accessible.")
 			start = time.Now() // Reset the timer
 		} else {
 			elapsed := time.Since(start)
