@@ -66,8 +66,8 @@ func main() {
 				} else {
 					fmt.Println("Router restarted successfully.")
 				}
-				fmt.Println("Waiting for 2 minutes.")
-				time.Sleep(2 * time.Minute)
+				fmt.Println("Waiting for 3 minutes.")
+				time.Sleep(3 * time.Minute)
 				start = time.Now() // Reset the timer after a restart
 				fmt.Println("Proceeding")
 			}
